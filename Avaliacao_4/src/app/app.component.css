@@ -1,0 +1,192 @@
+/* Importa uma fonte do Google Fonts para um visual mais moderno */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Aplica a fonte importada */
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    /* Gradiente de fundo sutil e moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Garante que ocupe a altura mínima da tela */
+    margin: 0;
+    color: #333;
+    /* Cor de texto padrão */
+    line-height: 1.6;
+    /* Espaçamento entre linhas para melhor leitura */
+    padding: 20px;
+    /* Adiciona um padding para telas menores */
+    box-sizing: border-box;
+    /* Inclui padding e borda no tamanho total */
+}
+
+
+/* Contêiner principal do formulário (o "card") */
+
+.login-container {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    /* Padding um pouco maior para mais espaço */
+    border-radius: 12px;
+    /* Cantos mais arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Sombra mais proeminente e suave */
+    width: 100%;
+    /* Ocupa a largura total em telas pequenas */
+    max-width: 420px;
+    /* Largura máxima para desktop */
+    text-align: center;
+    position: relative;
+    /* Para possíveis elementos posicionados */
+    overflow: hidden;
+    /* Garante que elementos filhos não ultrapassem */
+}
+
+
+/* Título do formulário */
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    /* Mais espaço abaixo do título */
+    font-size: 2.2em;
+    /* Título maior e mais impactante */
+    font-weight: 700;
+    /* Negrito mais forte */
+}
+
+
+/* Agrupamento de label e input */
+
+.input-group {
+    margin-bottom: 25px;
+    /* Mais espaço entre os grupos */
+    text-align: left;
+}
+
+
+/* Labels dos campos */
+
+label {
+    display: block;
+    color: #555;
+    margin-bottom: 10px;
+    /* Mais espaço entre label e input */
+    font-weight: 500;
+    /* Peso da fonte médio */
+    font-size: 1.1em;
+    /* Tamanho da fonte ligeiramente maior */
+}
+
+
+/* Campos de entrada de texto e senha */
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 15px;
+    /* Padding ajustado */
+    border: 1px solid #ddd;
+    /* Borda mais suave */
+    border-radius: 8px;
+    /* Cantos arredondados nos inputs */
+    box-sizing: border-box;
+    font-size: 1.05em;
+    /* Tamanho da fonte levemente maior */
+    color: #333;
+    background-color: #f9f9f9;
+    /* Um fundo sutil para os inputs */
+    transition: all 0.3s ease-in-out;
+    /* Transição para foco e hover */
+}
+
+
+/* Estilo para campos em foco */
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    /* Borda azul vibrante no foco */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    /* Sombra de foco suave */
+    background-color: #fff;
+    /* Fundo branco no foco */
+    outline: none;
+}
+
+
+/* Botão "Entrar" */
+
+button {
+    width: 100%;
+    padding: 15px;
+    /* Padding maior para o botão */
+    background: linear-gradient(to right, #007bff, #0056b3);
+    /* Gradiente de azul para o botão */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    /* Cantos arredondados no botão */
+    font-size: 1.2em;
+    /* Texto do botão maior */
+    font-weight: 700;
+    /* Negrito para o botão */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* Transição para hover */
+    letter-spacing: 0.5px;
+    /* Espaçamento entre letras */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    /* Sombra para o botão */
+}
+
+
+/* Efeito hover para o botão */
+
+button:hover {
+    transform: translateY(-2px);
+    /* Efeito de "subir" no hover */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    /* Sombra mais intensa no hover */
+    background: linear-gradient(to right, #0056b3, #007bff);
+    /* Inverte o gradiente no hover */
+}
+
+
+/* Estilos para responsividade em telas menores */
+
+@media (max-width: 600px) {
+    .login-container {
+        margin: 0 15px;
+        /* Margem nas laterais para telas pequenas */
+        padding: 40px 25px;
+        /* Ajusta o padding */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        /* Sombra um pouco menor */
+    }
+    h1 {
+        font-size: 1.8em;
+        /* Diminui o tamanho do título */
+        margin-bottom: 25px;
+    }
+    label {
+        font-size: 1em;
+        /* Ajusta o tamanho da fonte do label */
+    }
+    input[type="email"],
+    input[type="password"] {
+        padding: 12px 14px;
+        /* Ajusta o padding dos inputs */
+        font-size: 1em;
+    }
+    button {
+        padding: 13px;
+        /* Ajusta o padding do botão */
+        font-size: 1.1em;
+    }
+}

@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Usando BigInt para calcular fatoriais maiores sem perda de precisão
-        let result = 1 n; // 'n' no final indica que é um BigInt
-        for (let i = 2 n; i <= num; i++) {
+        let result = 1n; // 'n' no final indica que é um BigInt
+        for (let i = 2n; i <= BigInt(num); i++) {
             result *= i;
         }
 
